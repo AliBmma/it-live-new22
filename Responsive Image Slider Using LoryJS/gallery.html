@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Image Slider | LoryJS</title>
+      <link rel="stylesheet" href="maingallery.css">
+      <script src="lory.min.js"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+<body>
+
+      <header>
+
+
+
+
+      
+
+      
+            <a href="#" class="site-logo" aria-label="homepage">IT-LIVE</a>
+            <nav class="main-nav">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__list-item">
+                  <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__list-item">
+                  <a href="#speakers" class="nav__link">Speakers</a>
+                </li>
+                <li class="nav__list-item">
+                  <a href="#Supporters" class="nav__link">Supporters</a>
+                </li>
+                <li class="nav__list-item"><a href="/Responsive Image Slider Using LoryJS/gallery.html" class="nav__link">gallery</a></li>
+              </ul>
+            </nav>
+            <nav class="account">
+              <ul class="nav__list">
+                <li class="nav__list-item">
+                  <a class="nav__link nav__link--btn" href="#">Login</a>
+                </li>
+                <li class="nav__list-item">
+                  <a
+                    class="nav__link nav__link--btn nav__link--btn--highlight"
+                    href="#"
+                    >Join</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </header>
+
+      <div class="carousel js-carousel">
+            <figure class="carousel__frame js-carousel__frame">
+                  <div class="carousel__slides js-carousel__slides">
+                        <img src="image1.jpg" class="carousel__item" />
+                        <img src="image2.jpg" class="carousel__item" />
+                        <img src="image3.jpg" class="carousel__item" />
+                        <img src="image4.jpg" class="carousel__item" />
+                        <img src="image5.jpg" class="carousel__item" />
+
+                  </div>
+
+                  <button class="carousel__prev js-carousel__prev">
+                        <i class="fas fa-chevron-left"></i>
+                        </button>
+                  <button class="carousel__next js-carousel__next">
+                        <i class="fas fa-chevron-right"></i>
+                  </button>
+
+            </figure>
+      </div>
+
+      <script type="text/javascript">
+
+      document.addEventListener('DOMContentLoaded', function() {
+      run();
+      });
+
+      function run() {
+            var slider = document.querySelector('.js-carousel');
+            lory(slider, {
+            infinite: 1,
+            enableMouseEvents: true,
+            classNameFrame: 'js-carousel__frame',
+            classNameSlideContainer: 'js-carousel__slides',
+            classNamePrevCtrl: 'js-carousel__prev',
+            classNameNextCtrl: 'js-carousel__next',      
+            });
+      }
+
+      </script>
+
+
+</body>
+</html>
